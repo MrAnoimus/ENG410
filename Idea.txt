@@ -1,0 +1,7 @@
+Limited turn story
+	- Save X in Y turns
+	- Bucket list
+		- Apologize to EX
+		- Visit parents
+	
+
