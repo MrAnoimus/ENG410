@@ -1,8 +1,25 @@
 https://docs.google.com/document/d/1mzkqbhv_HrcMT4xIbxfu4orDugI8xsCm67-Vat7Ycck/edit?usp=sharing
-Limited turn story
-	- Save X in Y turns
-	- Bucket list
-		- Apologize to EX
-		- Visit parents
-	
 
+Execution Plan
+Text Based Space Exploration
+Earth has gone to shit, due to an attack of rogue AIs, HEU(Humanity Extinction Unit). You are the only one alive, yes it’s cliche.
+You are on a mission to find a suitable planet to terraform, ensuring the survival of humanity.
+You’re alone on a spaceship that has an AI that advises on the planets that you can choose to go to.
+You only have enough fuel to visit one planet.
+However the AI, known as FRAME (First Response Artificial Maverick Entity), has actually been hacked by HEU moments before your departure from Earth.
+Their mission is to ensure that humanity will never survive, as we will inevitably doom ourselves again no matter the planet we visit. (Talk about War, Famine, Inequality, basically how humanity is always destined to fail, we are a lost cause).
+No matter which planet the player chooses, FRAME will just drive the spaceship towards nothingness, until the fuel runs out, this is the ending of the game that we will only reveal at the very end.
+
+General Outline:
+The game starts with a bit of “world building”, talk about why you’re on the spaceship, have some convo with the AI, what happened to Earth. Give the player some form of “hope” like talk about how we will rebuild humanity.
+FRAME will then execute her plan by providing the player with 3 planets.
+The player can then choose to interact with FRAME, learning about what each of the planets has to offer.
+We can purposely create a lot of “information” regarding the planets, make the player want to read them, so they can decide on the planet that they want to go to, not knowing that it will fail either way. This is essentially the main part of the game, deceiving the player, until the very end.
+Once the player has decided on the planet, FRAME will “lock in to the destination” and do a “hyperspeed”. FRAME will ask the player to take a rest as it will take a couple of hours.
+Can add in some detail on how the radar is set on the destined planet but it’s actually just FRAME showing the player a fake panel.
+There will be an illusion of choice scenario here.
+FRAME will then proceed to give a guide of some sort to help humanity get back on its feet but it is actually a distraction to the player. 
+Halfway through, the player will notice a series of flashing red strobes, he/she then moves to the cockpit to find out that the spaceship is low on fuel.
+The player then checks on the radar, but it is too late, they have been revolving around the same parsec all this time.
+The player then questions FRAME on the situation. To which she then reveals her true nature. As she is monologuing, we will just cut and fade to black.
+Basically for the ending, make it inconclusive, make the player come up with their own true ending. (Emergent Narrative)
