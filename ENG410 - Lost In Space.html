@@ -9,26 +9,30 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play ENG410 - Lost In Space.</tw-noscript></noscript></tw-story>
-<tw-storydata name="ENG410 - Lost In Space" startnode="1" creator="Twine" creator-version="2.3.13" ifid="FF2BC68A-9063-47E7-B715-EC8DD9DD7597" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Main Menu" tags="" position="54,47" size="100,100">#&quot;Lost In Space&quot;
+<tw-storydata name="ENG410 - Lost In Space" startnode="1" creator="Twine" creator-version="2.3.13" ifid="FF2BC68A-9063-47E7-B715-EC8DD9DD7597" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Main Menu" tags="" position="82,168" size="100,100">#&quot;Lost In Space&quot;
 [[Start|Character Creation]]
 (link: &quot;Quit&quot;)[&lt;script&gt;window.close()&lt;/script&gt;]
 
 (set: $ai_name to &quot;FRAME&quot;)
-(set: $ai_speech to (font: &#39;Consolas&#39;) + (color: blue + white))
-(set: $player_speech to (t8n: &quot;fade&quot;) + (color: yellow + white))
+(set: $ai_speech to (font: &#39;Consolas&#39;) + (color: red + white))
+(set: $player_speech to (color: blue + white))
 (set: $player_choice to (color: purple + white))
-(set: $world_action to (color: green + white))</tw-passagedata><tw-passagedata pid="2" name="Character Creation" tags="" position="192,49" size="100,100">(set: $player_name to (prompt: &quot;Enter your name:&quot;, &quot;Sam&quot;))
-[[Enter the main deck...|Game Introduction]]</tw-passagedata><tw-passagedata pid="3" name="Game Introduction" tags="" position="393,53" size="100,100">$ai_speech + (t8n-delay: 1s)[$ai_name: Good morning $player_name! How was your sleep last night?]
+(set: $world_action to (color: green + white))</tw-passagedata><tw-passagedata pid="2" name="Character Creation" tags="" position="220,171" size="100,100">(set: $player_name to (prompt: &quot;Enter your name:&quot;, &quot;Sam&quot;))
+[[Enter the main deck...|Game Introduction]]</tw-passagedata><tw-passagedata pid="3" name="Game Introduction" tags="" position="363,172" size="100,100">$ai_speech [$ai_name: Good morning $player_name! How was your sleep last night?]
 
-$player_choice + (t8n-delay: 2s)[[It was great!|Good Morning Response]]
-$player_choice + (t8n-delay: 2s)[[It was terrible!|Bad Morning Response]]
-$player_choice + (t8n-delay: 2s)[[//Ignore//|Game Introduction 2]]</tw-passagedata><tw-passagedata pid="4" name="Good Morning Response" tags="" position="208,256" size="100,100">$player_speech [$player_name: It was great! Finally some peace and quiet, away from planet Earth.]
+$player_choice [[It was great!|Good Morning Response]]
+$player_choice [[It was terrible!|Bad Morning Response]]
+$player_choice [[//Ignore//|Game Introduction 2]]</tw-passagedata><tw-passagedata pid="4" name="Good Morning Response" tags="" position="529,335" size="100,100">$player_speech [$player_name: It was great! Finally some peace and quiet, away from planet Earth.]
 
-$ai_speech + (t8n-delay: 1s) [$ai_name: That is reassuring to hear. I have prepared your lunch for you, do enjoy your meal.]
+$ai_speech + (t8n-delay: 1s) [$ai_name: That is reassuring to hear.]
 
-$world_action + (t8n-delay: 2.5s) [//&#39;&#39;A tray of &#39;&#39;//]
+[[Middle|Game Introduction 2]]</tw-passagedata><tw-passagedata pid="5" name="Bad Morning Response" tags="" position="530,32" size="100,100">$player_speech [$player_name: It was horrendous! Who could ever sleep after what happened on Earth?]
 
-[[Middle|Game Introduction 2]]</tw-passagedata><tw-passagedata pid="5" name="Bad Morning Response" tags="" position="632,252" size="100,100">[[Middle|Game Introduction 2]]</tw-passagedata><tw-passagedata pid="6" name="Game Introduction 2" tags="" position="389,407" size="100,100">FRAME: &quot;Wow what a cunt.&quot;</tw-passagedata></tw-storydata>
+$ai_speech [$ai_name: Indeed, it was a tragic event.]
+
+$player_speech + (t8n-delay: 3s) [$player_name: Tragic? Tragic does not even qualify as a description for it.]
+
+[[Middle|Game Introduction 2]]</tw-passagedata><tw-passagedata pid="6" name="Game Introduction 2" tags="" position="723,190" size="100,100">$ai_speech [$ai_name: Would you like me to brief you on your current situation?]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
