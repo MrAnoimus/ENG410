@@ -20,21 +20,22 @@
 (set: $ai_name to &quot;FRAME&quot;)
 (set: $ai_speech to (font: &#39;Consolas&#39;) + (color: red + white))
 (set: $player_speech to (color: blue + white))
-(set: $player_action to (color: blue + green + white))
+(set: $player_action to (color: yellow + white))
 (set: $player_choice to (color: purple + white))
-(set: $world_action to (font: &#39;Times New Roman&#39;) + (color: green + white))</tw-passagedata><tw-passagedata pid="2" name="Corridor" tags="" position="446,183" size="100,100">$world_action [A robotic voice begins to echo throughout the ship right as you exit your quarters.]
+(set: $world_action to (font: &#39;Times New Roman&#39;) + (color: white))
+(set: $hologram to + (color: green + white))</tw-passagedata><tw-passagedata pid="2" name="Corridor" tags="" position="734,26" size="100,100">$world_action [A robotic voice begins to echo throughout the ship right as you exit your quarters.]
 
 $ai_speech [$ai_name: Good morning $player_name! How was your sleep last night?]
 
 $player_choice [[It was great!|Good Morning Response]]
 $player_choice [[It was terrible!|Bad Morning Response]]
-$player_choice [[//Ignore//|Corridor - Lights Flickering]]</tw-passagedata><tw-passagedata pid="3" name="Good Morning Response" tags="" position="289,250" size="100,100">$player_speech [$player_name: It was great! Finally some peace and quiet, away from planet Earth. How was yours?]
+$player_choice [[//Ignore//|Corridor - Lights Flickering]]</tw-passagedata><tw-passagedata pid="3" name="Good Morning Response" tags="" position="733,150" size="100,100">$player_speech [$player_name: It was great! Finally some peace and quiet, away from planet Earth. How was yours?]
 
 $ai_speech + (t8n-delay: 1s) [$ai_name: Very funny, you know I don&#39;t have to sleep.]
 
 $ai_speech + (t8n-delay: 2s) [$ai_name: Unfortunately, we don&#39;t have much time, please make your way to the cockpit immediately.]
 
-[[Head to the cockpit|Corridor - Lights Flickering]]</tw-passagedata><tw-passagedata pid="4" name="Bad Morning Response" tags="" position="595,250" size="100,100">$player_speech [$player_name: It was horrendous! I could not sleep at all.]
+[[Head to the cockpit|Corridor - Lights Flickering]]</tw-passagedata><tw-passagedata pid="4" name="Bad Morning Response" tags="" position="877,25" size="100,100">$player_speech [$player_name: It was horrendous! I could not sleep at all.]
 
 $ai_speech + (t8n-delay: 1s)[$ai_name: What is keeping you up?]
 
@@ -42,7 +43,7 @@ $player_speech + (t8n-delay: 2s)[$player_name: What do you think?]
 
 $ai_speech + (t8n-delay: 3s)[$ai_name: I apologize for mentioning the obvious.]
 
-[[Head to the cockpit|Corridor - Lights Flickering]]</tw-passagedata><tw-passagedata pid="5" name="Corridor - Lights Flickering" tags="" position="445,357" size="100,100">$world_action [Lights begin to flicker.]
+[[Head to the cockpit|Corridor - Lights Flickering]]</tw-passagedata><tw-passagedata pid="5" name="Corridor - Lights Flickering" tags="" position="888,148" size="100,100">$world_action [Lights begin to flicker.]
 
 $player_speech [$player_name: Woah...FRAME? What&#39;s going on?]
 
@@ -52,8 +53,8 @@ $player_speech [$player_name: Weird... it was just fine yesterday.]
 
 $ai_speech [$ai_name: Would you like me to deploy some helper droids to take a look at the situation?]
 
-$player_choice [[Sure, I will head to the cockpit|Accept FRAME Help]]
-$player_choice [[It&#39;s alright. I will do it myself|Reject FRAME Help]]
+$player_choice [[Sure|Accept FRAME Help]]
+$player_choice [[Nah. I will do it myself|Reject FRAME Help]]
 </tw-passagedata><tw-passagedata pid="6" name="Main Ward" tags="" position="446,31" size="100,100">$world_action + (t8n: &quot;fade&quot;) + (t8n-delay: 0.1s)[You toss and turn in your bed as your vision slowly sharpens itself, adjusting to the dimly lit surroundings of your bedroom.]
 
 $world_action + (t8n: &quot;fade&quot;) + (t8n-delay: 1s) [You sit back up, stretching your arms, trying to regain your strength.]
@@ -74,7 +75,7 @@ $world_action + (t8n: &quot;fade&quot;) + (t8n-delay: 4s) [You have been trained
 $world_action + (t8n: &quot;fade&quot;) + (t8n-delay: 5s) [Your task now is to decide on an inhabitable planet so you can rebuild humanity.]
 
 [[Wake Up...|Main Ward]]</tw-passagedata><tw-passagedata pid="8" name="Character Creation" tags="" position="167,32" size="100,100">(set: $player_name to (prompt: &quot;What is your name?&quot;, &quot;Sam&quot;))
-(go-to: &quot;Exposition&quot;)</tw-passagedata><tw-passagedata pid="9" name="Family Photo Option" tags="" position="647,37" size="100,100">$world_action + (t8n: &quot;fade&quot;) + (t8n-delay: 0.1s) [You see a couple with smiles that reach beyond their faces.]
+(go-to: &quot;Exposition&quot;)</tw-passagedata><tw-passagedata pid="9" name="Family Photo Option" tags="" position="581,34" size="100,100">$world_action + (t8n: &quot;fade&quot;) + (t8n-delay: 0.1s) [You see a couple with smiles that reach beyond their faces.]
 
 $world_action + (t8n: &quot;fade&quot;) + (t8n-delay: 1s) [It is a wedding photo, of you and your partner.]
 
@@ -84,23 +85,28 @@ $player_choice + (t8n: &quot;fade&quot;) + (t8n-delay: 3s) [$player_name: Babe..
 
 $world_action + (t8n: &quot;fade&quot;) + (t8n-delay: 3s) [You place the photo back down on the table as you take a deeper look at it.]
 
-[[Leave your quarters|Corridor]]</tw-passagedata><tw-passagedata pid="10" name="Reject FRAME Help" tags="" position="585,444" size="100,100">$player_speech [$player_name: It&#39;s alright, the electrical room is just next to the cockpit anyways.]
+[[Leave your quarters|Corridor]]</tw-passagedata><tw-passagedata pid="10" name="Reject FRAME Help" tags="" position="1019,152" size="100,100">$player_speech [$player_name: It&#39;s alright, the electrical room is just next to the cockpit anyways.]
 
 $ai_speech [$ai_name: But we are already running short on time...]
 
 $player_speech [$player_name: It will be faster for me to fix it anyways.]
 
 [[Head To Electrical|Electrical]]
-</tw-passagedata><tw-passagedata pid="11" name="Accept FRAME Help" tags="" position="293,445" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Electrical" tags="" position="745,446" size="100,100">$world_action [You arrive at the electrical room hastily. You scan around the generators and you come across a panel that seems to be glitching out.]
+</tw-passagedata><tw-passagedata pid="11" name="Accept FRAME Help" tags="" position="889,278" size="100,100">$world_action [Helper droids emerge from the other end of the corridor as they head towards the electrical room. Seemingly to look for faulty equipments.]
+
+$player_speech [$player_name: That seems reassuring.]
+
+$player_choice [[Head to the cockpit|Cockpit]]
+</tw-passagedata><tw-passagedata pid="12" name="Electrical" tags="" position="1145,154" size="100,100">$world_action [You arrive at the electrical room hastily. You scan around the generators and you come across a panel that seems to be glitching out.]
 
 $player_speech [$player_name: What is going on? This isn&#39;t supposed to be happening.]
 
 $ai_speech [$ai_name: It seems that you have found the fault in the systems.]
 
 $player_choice [[Hit the panel|Hit Panel]]
-$player_choice [[Reroute the wires.|Reroute Panel]]</tw-passagedata><tw-passagedata pid="13" name="Hit Panel" tags="" position="905,446" size="100,100">$player_action [KNOCK KNOCK KNOCK]
+$player_choice [[Reroute the wires.|Reroute Panel]]</tw-passagedata><tw-passagedata pid="13" name="Hit Panel" tags="" position="1331,155" size="100,100">$player_action [KNOCK KNOCK KNOCK]
 
-$player_action [Come on...why aren&#39;t you working?]
+$player_speech [$player_name: Come on...why aren&#39;t you working?]
 
 $ai_speech [$ai_name: I am not so sure if hitting the panel is a good idea.]
 
@@ -108,7 +114,8 @@ $player_action [KNOCK KNOCK KNOCK]
 
 $ai_speech [$ai_name: How about you try rerouting the wires behind the panel?]
 
-[[Reroute the panel|Reroute Panel]] </tw-passagedata><tw-passagedata pid="14" name="Reroute Panel" tags="" position="738,617" size="100,100">$world_action [You pry open the back of the glitched panel. Revealing a bunch of dangling wires, one of them seems to be emitting sparks. You then yank the damaged wire off the panel.]
+[[Continue hitting the panel|Hit Panel]]
+[[Reroute the panel|Reroute Panel]]</tw-passagedata><tw-passagedata pid="14" name="Reroute Panel" tags="" position="1149,276" size="100,100">$world_action [You pry open the back of the glitched panel. Revealing a bunch of dangling wires, one of them seems to be emitting sparks. You then yank the damaged wire off the panel.]
 
 $player_speech [$player_name: FRAME? What should I do next?]
 
@@ -116,7 +123,7 @@ $ai_speech [$ai_name: If I remember my protocols clearly, seems like you have to
 
 $player_choice [[Plug in the red wire|Wrong Wire]]
 $player_choice [[Plug in the blue wire|Wrong Wire]]
-$player_choice [[Plug in the green wire|Correct Wire]]</tw-passagedata><tw-passagedata pid="15" name="Wrong Wire" tags="" position="990,616" size="100,100">$player_speech [$player_name: Nothing seems to be working.]
+$player_choice [[Plug in the green wire|Correct Wire]]</tw-passagedata><tw-passagedata pid="15" name="Wrong Wire" tags="" position="1336,281" size="100,100">$player_speech [$player_name: Nothing seems to be working.]
 
 $ai_speech [$ai_name: That is because you have inserted the wrong wire.]
 
@@ -127,7 +134,39 @@ $ai_speech [$ai_name: The GREEN wire.]
 $player_choice [[Plug in the red wire|Wrong Wire]]
 $player_choice [[Plug in the blue wire|Wrong Wire]]
 $player_choice [[Plug in the green wire|Correct Wire]]
-</tw-passagedata><tw-passagedata pid="16" name="Correct Wire" tags="" position="739,773" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="16" name="Correct Wire" tags="" position="1149,398" size="100,100">$world_action [The light seems to have stopped flickering.]
+
+$ai_speech [$ai_name: There we go, Please head to the cockpit immediately.]
+
+$player_choice [[Proceed to the cockpit|Cockpit]]
+</tw-passagedata><tw-passagedata pid="17" name="Cockpit" tags="" position="890,404" size="100,100">$world_action [You head over to the main control panel, located in the center of the cockpit.]
+
+$player_speech [$player_name: $ai_name, catch me up to speed, will ya?]
+
+$world_action + (t8n: &quot;slide-up&quot;) + (t8n-delay: 2s)[Various holograms start to beam up in front of the main control panel. Some of them have videos playing on a loop while others have texts flowing about.]
+
+$ai_speech [$ai_name: As you have already know, it has been a few days since the collapse of Earth. As of this moment, you are the only human alive in this galaxy.]
+
+$player_speech [$player_name: ]
+
+$ai_speech [$ai_name: I have already narrowed down the planets in the nearby galaxy that is suitable for human inhabitation.]
+
+$ai_speech [$ai_name: So what&#39;s next?]
+
+$player_choice [[Learn more about HEU|HEU]]
+$player_choice [[Learn more about your mission|Mission Report]]
+$player_choice [[Select a planet|Planet Introduction]]
+</tw-passagedata><tw-passagedata pid="18" name="HEU" tags="" position="1019,280" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="19" name="Mission Report" tags="" position="740,277" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="Planet Introduction" tags="" position="746,404" size="100,100">$player_speech [$player_name: So what are the planets that you have found?]
+
+$world_action [Three holographic spheres emerge out of thin air and start to revolve around you.]
+
+$ai_speech [$ai_name: These are the ones. You may click on them to learn more about its planetary structure.]
+
+$player_choice [[Learn more about Gliese 581c|Gliese 581c Information]]
+$player_choice [[Learn more about Kepler 10c|Kepler 10c Information]]
+$player_choice [[Learn more about JX-41dC|JX-41dC Information]]</tw-passagedata><tw-passagedata pid="21" name="Gliese 581c Information" tags="" position="575,406" size="100,100">$world_action [Upon selecting the hologram of Gliese 581c, a digital panel of information starts to flow in from beside the sphere.]
+
+</tw-passagedata><tw-passagedata pid="22" name="Kepler 10c Information" tags="" position="576,538" size="100,100">$world_action [Upon selecting the hologram of Kepler 10c, a digital panel of information starts to flow in from beside the sphere.]</tw-passagedata><tw-passagedata pid="23" name="JX-41dC Information" tags="" position="747,539" size="100,100">$world_action [Upon selecting the hologram of JX-41dC, a digital panel of information starts to flow in from beside the sphere.]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
