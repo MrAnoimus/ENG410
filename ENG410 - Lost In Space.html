@@ -84,7 +84,7 @@ $player_choice + (t8n: &quot;fade&quot;) + (t8n-delay: 3s) [$player_name: Babe..
 
 $world_action + (t8n: &quot;fade&quot;) + (t8n-delay: 3s) [You place the photo back down on the table as you take a deeper look at it.]
 
-[[Leave your quarters|Corridor]]</tw-passagedata><tw-passagedata pid="10" name="Reject FRAME Help" tags="" position="585,444" size="100,100">$player_speech [$player_name: It&#39;s alright, the electrical room is just beside the cockpit anyways.]
+[[Leave your quarters|Corridor]]</tw-passagedata><tw-passagedata pid="10" name="Reject FRAME Help" tags="" position="585,444" size="100,100">$player_speech [$player_name: It&#39;s alright, the electrical room is just next to the cockpit anyways.]
 
 $ai_speech [$ai_name: But we are already running short on time...]
 
@@ -108,7 +108,7 @@ $player_action [KNOCK KNOCK KNOCK]
 
 $ai_speech [$ai_name: How about you try rerouting the wires behind the panel?]
 
-[[Reroute the panel|Reroute Panel]] </tw-passagedata><tw-passagedata pid="14" name="Reroute Panel" tags="" position="738,617" size="100,100">$world_aciton [You pry open the back of the glitched panel. Revealing a bunch of wires, one of them seems to be emitting sparks. You yank the damaged wire off the panel]
+[[Reroute the panel|Reroute Panel]] </tw-passagedata><tw-passagedata pid="14" name="Reroute Panel" tags="" position="738,617" size="100,100">$world_action [You pry open the back of the glitched panel. Revealing a bunch of dangling wires, one of them seems to be emitting sparks. You then yank the damaged wire off the panel.]
 
 $player_speech [$player_name: FRAME? What should I do next?]
 
@@ -116,7 +116,18 @@ $ai_speech [$ai_name: If I remember my protocols clearly, seems like you have to
 
 $player_choice [[Plug in the red wire|Wrong Wire]]
 $player_choice [[Plug in the blue wire|Wrong Wire]]
-$player_choice [[Plug in the green wire|Correct Wire]]</tw-passagedata><tw-passagedata pid="15" name="Wrong Wire" tags="" position="663,767" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Correct Wire" tags="" position="813,767" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+$player_choice [[Plug in the green wire|Correct Wire]]</tw-passagedata><tw-passagedata pid="15" name="Wrong Wire" tags="" position="990,616" size="100,100">$player_speech [$player_name: Nothing seems to be working.]
+
+$ai_speech [$ai_name: That is because you have inserted the wrong wire.]
+
+$player_speech [$player_name: Which wire did you say it was again?]
+
+$ai_speech [$ai_name: The GREEN wire.]
+
+$player_choice [[Plug in the red wire|Wrong Wire]]
+$player_choice [[Plug in the blue wire|Wrong Wire]]
+$player_choice [[Plug in the green wire|Correct Wire]]
+</tw-passagedata><tw-passagedata pid="16" name="Correct Wire" tags="" position="739,773" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
