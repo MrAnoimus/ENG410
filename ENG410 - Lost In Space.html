@@ -335,7 +335,7 @@ $player_choice [[That&#39;s not true...|Ending 2]]</tw-passagedata><tw-passageda
 
 $heu_speech [$heu_name: Look at how Mars turned out, it does not matter where humans go to, your greed will eventually destroy you all.]
 
-(Set: $ship_countDown to 10)(live: 1s)[(if: $ship_countDown is 0)[(goto:&quot;Ending 3&quot;)(stop:)](else:)[(set: $ship_countDown to it -1)$ship_warning[//WARNING! WARNING! Fuel Capacity at $ship_countDown%.//] ]
+(Set: $ship_countDown to 10)(live: 3s)[(if: $ship_countDown is 0)[(goto:&quot;Ending 3&quot;)(stop:)](else:)[(set: $ship_countDown to it -1)$ship_warning[//WARNING! WARNING! Fuel Capacity at $ship_countDown%.//] ]
 ]
 
 $player_speech [$player_name: Please! We still have time. I have located a nearby planet, we can just land there.]
