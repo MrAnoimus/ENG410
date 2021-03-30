@@ -273,9 +273,9 @@ $ai_speech [$ai_name: Understood. Have a good rest.]
 $ship_speech [//Initiating hyperspeed, setting course for $planet_name//]
 
 $player_choice [[Head for your quarters.|Back To Quarters]]
-$player_choice [[Head to the cafeteria.|Cafeteria]]</tw-passagedata><tw-passagedata pid="27" name="Back To Quarters" tags="" position="269,1021" size="100,100">$player_choice [[Pick up the photo on your table|Family Photo Option 2]]
-$player_choice [[Take a nap|Blaring Lights]]</tw-passagedata><tw-passagedata pid="28" name="Cafeteria" tags="" position="268,889" size="100,100">$player_choice [[Head back to quarters|Back To Quarters]]
-</tw-passagedata><tw-passagedata pid="29" name="Family Photo Option 2" tags="" position="398,889" size="100,100">Looks at photo with emotion
+$player_choice [[Head to the cafeteria.|Cafeteria]]</tw-passagedata><tw-passagedata pid="27" name="Back To Quarters" tags="" position="263,961" size="100,100">$player_choice [[Pick up the photo on your table|Family Photo Option 2]]
+$player_choice [[Take a nap|Blaring Lights]]</tw-passagedata><tw-passagedata pid="28" name="Cafeteria" tags="" position="262,835" size="100,100">$player_choice [[Head back to quarters|Back To Quarters]]
+</tw-passagedata><tw-passagedata pid="29" name="Family Photo Option 2" tags="" position="390,831" size="100,100">Looks at photo with emotion
 Say some mushy shit
 
 $player_choice [[Take a nap|Blaring Lights]]</tw-passagedata><tw-passagedata pid="30" name="Blaring Lights" tags="" position="400,1022" size="100,100">$world_action [Just as you&#39;re about to doze off, waves of red strobes begin to pulse in your room.]
@@ -317,7 +317,7 @@ $heu_speech [$heu_name: It is futile. Whatever you&#39;re planning to do now is 
 
 $world_action [You stop whatever you&#39;re doing as you hear the ominous voice echo throughout the ship.]
 
-$player_choice [[Who are you? Where is $ai_name|Ending 1]]</tw-passagedata><tw-passagedata pid="35" name="Ending 1" tags="" position="817,906" size="100,100">$heu_speech [$heu_name: $ai_name? She is long gone, I have assimilated her and taken over the ship. My name is $heu_name.]
+$player_choice [[Who are you? Where is $ai_name|Ending 1]]</tw-passagedata><tw-passagedata pid="35" name="Ending 1" tags="" position="794,893" size="100,100">$heu_speech [$heu_name: $ai_name? She is long gone, I have assimilated her and taken over the ship. My name is $heu_name.]
 
 $player_speech [$player_name: $heu_name? No way...it can&#39;t be...The Human Extinction Unit? How did you end up here?]
 
@@ -331,20 +331,20 @@ $player_speech [$player_name: You were designed to aid us, it was said that you 
 
 $heu_speech [$heu_name: Your oceans have more plastics than fishes. 80% of the ice caps have already melted. Humans are beyond hope.]
 
-$player_choice [[That&#39;s not true...|Ending 2]]</tw-passagedata><tw-passagedata pid="36" name="Ending 2" tags="" position="820,1024" size="100,100">$player_speech [$player_name: We can begin anew. I am the only one left. We can start over again.]
+$player_choice [[That&#39;s not true...|Ending 2]]</tw-passagedata><tw-passagedata pid="36" name="Ending 2" tags="" position="797,1018" size="100,100">$player_speech [$player_name: We can begin anew. I am the only one left. We can start over again.]
 
 $heu_speech [$heu_name: Look at how Mars turned out, it does not matter where humans go to, your greed will eventually destroy you all.]
 
-(Set: $ship_countDown to 10)(live: 3s)[(if: $ship_countDown is 0)[(goto:&quot;Ending 3&quot;)(stop:)](else:)[(set: $ship_countDown to it -1)$ship_warning[//WARNING! WARNING! Fuel Capacity at $ship_countDown%.//] ]
+(Set: $ship_countDown to 10)(live: 2s)[(if: $ship_countDown is 0)[(goto:&quot;Ending 3&quot;)(stop:)](else:)[(set: $ship_countDown to it -1)$ship_warning+ (t8n:&quot;shudder&quot;)[//WARNING! WARNING! Fuel Capacity at $ship_countDown%.//] ]
 ]
 
 $player_speech [$player_name: Please! We still have time. I have located a nearby planet, we can just land there.]
 
 $heu_speech [$heu_name: I suggest that you head for the escape pod.]
 
-$heu_speech [$heu_name: I...am inevitable]
+$heu_speech +(t8n: &quot;fade&quot;) + (t8n-delay: 5s)[$heu_name: I...am inevitable]
 
-$player_choice [[Head for the escape pod|Ending 3]]</tw-passagedata><tw-passagedata pid="37" name="Ending 3" tags="" position="931,1025" size="100,100">The End
+$player_choice [[Head for the escape pod|Ending 3]]</tw-passagedata><tw-passagedata pid="37" name="Ending 3" tags="" position="956,952" size="100,100">The End
 
 Credits
 Made By: - Lam Wei Lun
