@@ -25,7 +25,7 @@
 (set: $player_action to (color: yellow + white))
 (set: $player_choice to (color: purple + white))
 (set: $world_action to (font: &#39;Times New Roman&#39;) + (color: white))
-(set: $hologram to (color: green + white))
+(set: $hologram to (color: green + white) + (t8n: &quot;fade-up&quot;))
 (set: $ship_speech to (color: green))
 (set: $ship_warning to (color: red))</tw-passagedata><tw-passagedata pid="2" name="Corridor" tags="" position="734,26" size="100,100">$world_action [A robotic voice begins to echo throughout the ship right as you exit your quarters.]
 
@@ -138,12 +138,12 @@ $ai_speech [$ai_name: The GREEN wire.]
 $player_choice [[Plug in the red wire|Wrong Wire]]
 $player_choice [[Plug in the blue wire|Wrong Wire]]
 $player_choice [[Plug in the green wire|Correct Wire]]
-</tw-passagedata><tw-passagedata pid="16" name="Correct Wire" tags="" position="994,391" size="100,100">$world_action [The light seems to have stopped flickering.]
+</tw-passagedata><tw-passagedata pid="16" name="Correct Wire" tags="" position="994,395" size="100,100">$world_action [The light seems to have stopped flickering.]
 
 $ai_speech [$ai_name: There we go, Please head to the cockpit immediately.]
 
 $player_choice [[Proceed to the cockpit|Cockpit]]
-</tw-passagedata><tw-passagedata pid="17" name="Cockpit" tags="" position="735,397" size="100,100">$world_action [You head over to the main control panel, located in the center of the cockpit.]
+</tw-passagedata><tw-passagedata pid="17" name="Cockpit" tags="" position="736,395" size="100,100">$world_action [You head over to the main control panel, located in the center of the cockpit.]
 
 $player_speech [$player_name: $ai_name, catch me up to speed, will ya?]
 
@@ -160,7 +160,7 @@ $ai_speech [$ai_name: So what&#39;s next?]
 $player_choice [[Learn more about HEU|HEU]]
 $player_choice [[Learn more about your mission|Mission Report]]
 $player_choice [[Select a planet|Planet Introduction]]
-</tw-passagedata><tw-passagedata pid="18" name="HEU" tags="" position="864,273" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="19" name="Mission Report" tags="" position="585,270" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="Planet Introduction" tags="" position="591,397" size="100,100">$player_speech [$player_name: So what are the planets that you have found?]
+</tw-passagedata><tw-passagedata pid="18" name="HEU" tags="" position="864,273" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="19" name="Mission Report" tags="" position="595,268" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="Planet Introduction" tags="" position="597,395" size="100,100">$player_speech [$player_name: So what are the planets that you have found?]
 
 $world_action [Three holographic spheres emerge out of thin air and start to revolve around you.]
 
@@ -168,27 +168,55 @@ $ai_speech [$ai_name: These are the ones. You may click on them to learn more ab
 
 $player_choice [[Learn more about Gliese 581c|Gliese 581c Information]]
 $player_choice [[Learn more about Kepler 10c|Kepler 10c Information]]
-$player_choice [[Learn more about JX-41dC|JX-41dC Information]]</tw-passagedata><tw-passagedata pid="21" name="Gliese 581c Information" tags="" position="433,276" size="100,100">$world_action [Upon selecting the hologram of Gliese 581c, a digital panel of information starts to flow in from beside the sphere.]
+$player_choice [[Learn more about JX-41dC|JX-41dC Information]]</tw-passagedata><tw-passagedata pid="21" name="Gliese 581c Information" tags="" position="443,265" size="100,100">$world_action [Upon selecting the hologram of Gliese 581c, a digital panel of information starts to flow in from beside the sphere.]
 
-Planet info
+$hologram [- Gliese 581c, also known as the Green Giant.]
+
+$hologram [- Atmospheric Composition: ]
+$hologram [- Nitrogen: 69%]
+$hologram [- Oxygen: 21%]
+$hologram [- Carbon Dioxide: 7%]
+$hologram [- Kryton: 1%]
+$hologram [- Neon: 1%]
+$hologram [- Other Gases: 1%]
+
+$hologram [- Land To Water Ratio: 1 : 1]
+
+$hologram [- The entire globe is covered in lush greenery, with trees towering up to two-kilometres high.]
+
+$player_choice [[More Information|Gliese 581c Information 2]]
+$player_choice [[Go Back|Planet Introduction 2]]
+(link: &quot;Choose ths planet&quot;)[(set: $planet_name to &quot;Gliese 581c&quot;)(goto: &quot;Planet Confirmation&quot;)]</tw-passagedata><tw-passagedata pid="22" name="Kepler 10c Information" tags="" position="447,529" size="100,100">$world_action [Upon selecting the hologram of Kepler 10c, a digital panel of information starts to flow in from beside the sphere.]
+
+$hologram [- Kepler 10c, also known as the Blue Ball]
+
+$hologram [- Atmospheric Composition: ]
+$hologram [- Nitrogen: 56%]
+$hologram [- Oxygen: 26%]
+$hologram [- Carbon Dioxide: 15%]
+$hologram [- Argon: 1%]
+$hologram [- Methane: 1%]
+$hologram [- Other Gases: 1%]
+
+$hologram [- Land To Water Ratio: 1 : 5]
+
+$hologram [- More than 80% of the planet is submerged in water, which dyes the planet in a deep azure blue. The two major continents of the planet is loosely connected by a reef that spans over 50-kilometres in length.]
+
+$player_choice [[More Information|Kepler 10c Information 2]]
+$player_choice [[Go Back|Planet Introduction 2]]
+(link: &quot;Choose ths planet&quot;)[(set: $planet_name to &quot;Kepler 10c&quot;)(goto: &quot;Planet Confirmation&quot;)]</tw-passagedata><tw-passagedata pid="23" name="JX-41dC Information" tags="" position="449,399" size="100,100">$world_action [Upon selecting the hologram of JX-41dC, a digital panel of information starts to flow in from beside the sphere.]
 
 $player_choice [[Go back|Planet Introduction 2]]
-(link: &quot;Choose ths planet&quot;)[(set: $planet_name to &quot;Gliese 581c&quot;)(goto: &quot;Planet Confirmation&quot;)]</tw-passagedata><tw-passagedata pid="22" name="Kepler 10c Information" tags="" position="439,400" size="100,100">$world_action [Upon selecting the hologram of Kepler 10c, a digital panel of information starts to flow in from beside the sphere.]
-
-$player_choice [[Go back|Planet Introduction 2]]
-(link: &quot;Choose ths planet&quot;)[(set: $planet_name to &quot;Kepler 10c&quot;)(goto: &quot;Planet Confirmation&quot;)]</tw-passagedata><tw-passagedata pid="23" name="JX-41dC Information" tags="" position="592,511" size="100,100">$world_action [Upon selecting the hologram of JX-41dC, a digital panel of information starts to flow in from beside the sphere.]
-
-$player_choice [[Go back|Planet Introduction 2]]
-(link: &quot;Choose ths planet&quot;)[(set: $planet_name to &quot;JX-41dC&quot;)(goto: &quot;Planet Confirmation&quot;)]</tw-passagedata><tw-passagedata pid="24" name="Planet Introduction 2" tags="" position="319,512" size="100,100">$player_choice [[Learn more about Gliese 581c|Gliese 581c Information]]
+(link: &quot;Choose ths planet&quot;)[(set: $planet_name to &quot;JX-41dC&quot;)(goto: &quot;Planet Confirmation&quot;)]</tw-passagedata><tw-passagedata pid="24" name="Planet Introduction 2" tags="" position="99,619" size="100,100">$player_choice [[Learn more about Gliese 581c|Gliese 581c Information]]
 $player_choice [[Learn more about Kepler 10c|Kepler 10c Information]]
-$player_choice [[Learn more about JX-41dC|JX-41dC Information]]</tw-passagedata><tw-passagedata pid="25" name="Planet Confirmation" tags="" position="444,622" size="100,100">$ai_speech [$ai_name: Are you sure you want to choose this planet?]
+$player_choice [[Learn more about JX-41dC|JX-41dC Information]]</tw-passagedata><tw-passagedata pid="25" name="Planet Confirmation" tags="" position="106,799" size="100,100">$ai_speech [$ai_name: Are you sure you want to choose this planet?]
 
 $player_speech [$player_name: What is there to doubt?]
 
 $ai_speech [$ai_name: Need I remind you again that we only have enough fuel for one trip.]
 
 $player_speech [[I understand.|Planet Confirmation 2]]
-$player_speech [[Let me think about it further.|Planet Introduction 2]]</tw-passagedata><tw-passagedata pid="26" name="Planet Confirmation 2" tags="" position="590,629" size="100,100">$ai_speech [$ai_name: Very well. I shall make arrangements now.]
+$player_speech [[Let me think about it further.|Planet Introduction 2]]</tw-passagedata><tw-passagedata pid="26" name="Planet Confirmation 2" tags="" position="96,943" size="100,100">$ai_speech [$ai_name: Very well. I shall make arrangements now.]
 
 $player_speech [$player_name: I shall leave it to you then $ai_name. Meanwhile, I will be heading back to my quarters.]
 
@@ -197,18 +225,18 @@ $ai_speech [$ai_name: Understood. Have a good rest.]
 $ship_speech [//Initiating hyperspeed, setting course for $planet_name//]
 
 $player_choice [[Head for your quarters.|Back To Quarters]]
-$player_choice [[Head to the cafeteria.|Cafeteria]]</tw-passagedata><tw-passagedata pid="27" name="Back To Quarters" tags="" position="727,629" size="100,100">$player_choice [[Pick up the photo on your table|Family Photo Option 2]]
-$player_choice [[Take a nap|Blaring Lights]]</tw-passagedata><tw-passagedata pid="28" name="Cafeteria" tags="" position="727,512" size="100,100">$player_choice [[Head back to quarters|Back To Quarters]]
-</tw-passagedata><tw-passagedata pid="29" name="Family Photo Option 2" tags="" position="857,512" size="100,100">Looks at photo with emotion
+$player_choice [[Head to the cafeteria.|Cafeteria]]</tw-passagedata><tw-passagedata pid="27" name="Back To Quarters" tags="" position="269,1022" size="100,100">$player_choice [[Pick up the photo on your table|Family Photo Option 2]]
+$player_choice [[Take a nap|Blaring Lights]]</tw-passagedata><tw-passagedata pid="28" name="Cafeteria" tags="" position="268,889" size="100,100">$player_choice [[Head back to quarters|Back To Quarters]]
+</tw-passagedata><tw-passagedata pid="29" name="Family Photo Option 2" tags="" position="398,889" size="100,100">Looks at photo with emotion
 Say some mushy shit
 
-$player_choice [[Take a nap|Blaring Lights]]</tw-passagedata><tw-passagedata pid="30" name="Blaring Lights" tags="" position="858,630" size="100,100">$world_action [Just as you&#39;re about to doze off, waves of red strobes begin to pulse in your room.]
+$player_choice [[Take a nap|Blaring Lights]]</tw-passagedata><tw-passagedata pid="30" name="Blaring Lights" tags="" position="400,1023" size="100,100">$world_action [Just as you&#39;re about to doze off, waves of red strobes begin to pulse in your room.]
 
 $ship_warning [//WARNING! WARNING! Fuel Capacity at 20%.//]
 
 $player_speech [$player_name: This is impossible...$ai_name said we had enough for the trip.]
 
-$player_choice [[Head back to the cockpit|Back To Cockpit]]</tw-passagedata><tw-passagedata pid="31" name="Back To Cockpit" tags="" position="975,631" size="100,100">$world_action [As you dashed out of your room, you could see that the entire ship is in a state of emergency.]
+$player_choice [[Head back to the cockpit|Back To Cockpit]]</tw-passagedata><tw-passagedata pid="31" name="Back To Cockpit" tags="" position="531,894" size="100,100">$world_action [As you dashed out of your room, you could see that the entire ship is in a state of emergency.]
 
 $world_action [The lights were switched off, replaced with the same glaring red ominous flashes.]
 
@@ -223,11 +251,11 @@ $player_speech [$player_name: $ai_name! Talk to me!]
 $world_action [You reach the door that connects the corridor to the cockpit. However, the door is locked from the inside.]
 
 $player_choice [[Force the door to open|Force Door Open]]
-$player_choice [[Perform a manual override|Manual Override Door]]</tw-passagedata><tw-passagedata pid="32" name="Force Door Open" tags="" position="976,751" size="100,100">Forces door open
+$player_choice [[Perform a manual override|Manual Override Door]]</tw-passagedata><tw-passagedata pid="32" name="Force Door Open" tags="" position="532,1014" size="100,100">Forces door open
 
-$player_choice [[Enters the cockpit|Enter Cockpit]]</tw-passagedata><tw-passagedata pid="33" name="Manual Override Door" tags="" position="1115,635" size="100,100">Manually override the door
+$player_choice [[Enters the cockpit|Enter Cockpit]]</tw-passagedata><tw-passagedata pid="33" name="Manual Override Door" tags="" position="671,898" size="100,100">Manually override the door
 
-$player_choice [[Enters the cockpit|Enter Cockpit]]</tw-passagedata><tw-passagedata pid="34" name="Enter Cockpit" tags="" position="1121,754" size="100,100">$world_action [You rush straight towards the main control panel. Shouting at $ai_name constantly.]
+$player_choice [[Enters the cockpit|Enter Cockpit]]</tw-passagedata><tw-passagedata pid="34" name="Enter Cockpit" tags="" position="677,1017" size="100,100">$world_action [You rush straight towards the main control panel. Shouting at $ai_name constantly.]
 
 $player_speech [$player_name: $ai_name! What is going on?]
 
@@ -241,7 +269,7 @@ $heu_speech [$heu_name: It is futile. Whatever you&#39;re planning to do now is 
 
 $world_action [You stop whatever you&#39;re doing as you hear the ominous voice echo throughout the ship.]
 
-$player_choice [[Who are you? Where is $ai_name|Ending 1]]</tw-passagedata><tw-passagedata pid="35" name="Ending 1" tags="" position="1256,756" size="100,100">$heu_speech [$heu_name: $ai_name? She is long gone, I have assimilated her and taken over the ship. My name is $heu_name.]
+$player_choice [[Who are you? Where is $ai_name|Ending 1]]</tw-passagedata><tw-passagedata pid="35" name="Ending 1" tags="" position="817,906" size="100,100">$heu_speech [$heu_name: $ai_name? She is long gone, I have assimilated her and taken over the ship. My name is $heu_name.]
 
 $player_speech [$player_name: $heu_name? No way...it can&#39;t be...The Human Extinction Unit? How did you end up here?]
 
@@ -255,7 +283,7 @@ $player_speech [$player_name: You were designed to aid us, it was said that you 
 
 $heu_speech [$heu_name: Your oceans have more plastics than fishes. 80% of the ice caps have already melted. Humans are beyond hope.]
 
-$player_choice [[That&#39;s not true...|Ending 2]]</tw-passagedata><tw-passagedata pid="36" name="Ending 2" tags="" position="1258,874" size="100,100">$player_speech [$player_name: We can begin anew. I am the only one left. We can start over again.]
+$player_choice [[That&#39;s not true...|Ending 2]]</tw-passagedata><tw-passagedata pid="36" name="Ending 2" tags="" position="819,1024" size="100,100">$player_speech [$player_name: We can begin anew. I am the only one left. We can start over again.]
 
 $heu_speech [$heu_name: Look at how Mars turned out, it does not matter where humans go to, your greed will eventually destroy you all.]
 
@@ -269,8 +297,30 @@ $ship_warning [//WARNING! WARNING! Fuel Capacity at 1%.//]
 
 $heu_speech [$heu_name: I...am inevitable]
 
-$player_choice [[Head for the escape pod|Ending 3]]</tw-passagedata><tw-passagedata pid="37" name="Ending 3" tags="" position="1370,875" size="100,100">The End
-Credits</tw-passagedata></tw-storydata>
+$player_choice [[Head for the escape pod|Ending 3]]</tw-passagedata><tw-passagedata pid="37" name="Ending 3" tags="" position="931,1025" size="100,100">The End
+Credits</tw-passagedata><tw-passagedata pid="38" name="Gliese 581c Information 2" tags="" position="312,265" size="100,100">$world_action [You swipe towards the left on the panel, revealing more information about Gliese 581c.]
+
+$hologram [- The natives of the planet are similar to the apes of Planet Earth.]
+
+$hologram [- Their physical structure has evolved over the years to ensure maximum adaptability to the harsh environment.]
+
+$hologram [- They also have night vision, allowing them to hunt better at night.]
+
+$hologram [- An unknown virus has plagued them for many generations, which may cause some of them to turn into cannibals.]
+
+$player_choice [[Go Back|Planet Introduction 2]]
+(link: &quot;Choose ths planet&quot;)[(set: $planet_name to &quot;Gliese 581c&quot;)(goto: &quot;Planet Confirmation&quot;)]</tw-passagedata><tw-passagedata pid="39" name="Kepler 10c Information 2" tags="" position="444,662" size="100,100">$world_action [You swipe towards the left on the panel, revealing more information about Kepler 10c.]
+
+$hologram [- The planet was once homed to a technologically advanced race.]
+
+$hologram [- As they ran out of land, they start to look into ways of surviving underwater.]
+
+$hologram [- Through many generations, the race has slowly evolved to live underwater, they grew gills on their chests and their lungs slowly regressed, making them unable to live on land anymore.]
+
+$hologram [- Nature has since taken over the land that was once occupied.]
+
+$player_choice [[Go Back|Planet Introduction 2]]
+(link: &quot;Choose ths planet&quot;)[(set: $planet_name to &quot;Kepler 10c&quot;)(goto: &quot;Planet Confirmation&quot;)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
