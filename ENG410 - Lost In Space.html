@@ -13,7 +13,7 @@
 {
   display: none;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Main Menu" tags="" position="93,142" size="100,100">###HOPE
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Main Menu" tags="" position="94,141" size="100,100">###HOPE
 ####Humanity Origin Persistence Expedition
 [[Start|Character Creation]]
 (link: &quot;Quit&quot;)[&lt;script&gt;window.close()&lt;/script&gt;]
@@ -21,8 +21,8 @@
 (set: $world_action to (font: &#39;Times New Roman&#39;) + (color: white) + (t8n: &quot;fade&quot;))
 (set: $ai_name to &quot;FRAME&quot;)
 (set: $heu_name to &quot;HEU&quot;)
-(set: $ai_speech to (t8n: &quot;zoom&quot;) + (font: &#39;Consolas&#39;) + (color: orange))
-(set: $heu_speech to (t8n: &quot;zoom&quot;) + (font: &#39;Consolas&#39;) + (color: red + white))
+(set: $ai_speech to (t8n: &quot;fade-down&quot;) + (font: &#39;Consolas&#39;) + (color: orange))
+(set: $heu_speech to (t8n: &quot;fade-up&quot;) + (font: &#39;Consolas&#39;) + (color: red + white))
 (set: $player_speech to (t8n: &quot;fade&quot;) + (color: blue + white))
 (set: $player_action to (color: yellow + white))
 (set: $player_choice to (color: purple + white))
@@ -40,7 +40,7 @@ $ai_speech + (t8n-delay: 1s) [$ai_name: Very funny, you know I don&#39;t have to
 
 $ai_speech + (t8n-delay: 2s) [$ai_name: Unfortunately, we don&#39;t have much time, please make your way to the cockpit immediately.]
 
-[[Head to the cockpit|Corridor - Lights Flickering]]</tw-passagedata><tw-passagedata pid="4" name="Bad Morning Response" tags="" position="796,138" size="100,100">$player_speech + (t8n-delay: 1s)[$player_name: It was horrendous! I could not sleep at all.]
+[[Head to the cockpit|Corridor - Lights Flickering]]</tw-passagedata><tw-passagedata pid="4" name="Bad Morning Response" tags="" position="796,137" size="100,100">$player_speech + (t8n-delay: 1s)[$player_name: It was horrendous! I could not sleep at all.]
 
 $ai_speech + (t8n-delay: 2s)[$ai_name: What is keeping you up?]
 
@@ -48,7 +48,7 @@ $player_speech + (t8n-delay: 3s)[$player_name: What do you think?]
 
 $ai_speech + (t8n-delay: 4s)[$ai_name: I apologize for mentioning the obvious.]
 
-[[Head to the cockpit|Corridor - Lights Flickering]]</tw-passagedata><tw-passagedata pid="5" name="Corridor - Lights Flickering" tags="" position="790,253" size="100,100">$world_action + (t8n-delay: 0s)[Lights begin to flicker.]
+[[Head to the cockpit|Corridor - Lights Flickering]]</tw-passagedata><tw-passagedata pid="5" name="Corridor - Lights Flickering" tags="" position="790,252" size="100,100">(text-style: &quot;blink&quot;) + (t8n-delay: 0.1s)[Lights begin to flicker.]
 
 $player_speech + (t8n-delay: 1s)[$player_name: Woah...FRAME? What&#39;s going on?]
 
