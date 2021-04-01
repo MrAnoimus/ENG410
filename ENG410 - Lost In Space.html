@@ -80,7 +80,7 @@ $world_action + (t8n-delay: 4s) [A Rogue AI has purged most of humanity in the s
 $world_action + (t8n-delay: 5s) [Your task now is to decide on an inhabitable planet where you can rebuild humanity.]
 
 [[Wake Up...|Main Ward]]</tw-passagedata><tw-passagedata pid="8" name="Character Creation" tags="" position="224,144" size="100,100">(set: $player_name to (prompt: &quot;What is your name?&quot;, &quot;Sam&quot;))
-(go-to: &quot;Exposition&quot;)</tw-passagedata><tw-passagedata pid="9" name="Family Photo Option" tags="" position="498,257" size="100,100">$world_action + (t8n-delay: 0.1s) [You see a couple with smiles that reach beyond their faces.]
+(go-to: &quot;Exposition&quot;)</tw-passagedata><tw-passagedata pid="9" name="Family Photo Option" tags="" position="501,256" size="100,100">$world_action + (t8n-delay: 0.1s) [You see a couple with smiles that reach beyond their faces.]
 
 $world_action + (t8n-delay: 1s) [It is a wedding photo, of you and your partner.]
 
@@ -286,7 +286,7 @@ $ship_speech [//Initiating hyperspeed, setting course for $planet_name//]
 $player_choice [[Head for your quarters.|Back To Quarters]]</tw-passagedata><tw-passagedata pid="27" name="Back To Quarters" tags="" position="301,962" size="100,100">$player_choice [[Pick up the photo on your table|Family Photo Option 2]]
 $player_choice [[Take a nap|Blaring Lights]]</tw-passagedata><tw-passagedata pid="28" name="Family Photo Option 2" tags="" position="451,968" size="100,100">$world_action + (t8n-delay: 0.1s) [You pick up the photo on the table, looking deeply at it.]
 
-$player_speech + (t8n-delay: 1s) [$player_name: Babe...if only you&#39;re still here right now...]
+$player_speech + (t8n-delay: 1s) [$player_name: If only you&#39;re still here right now...]
 
 $player_choice [[Take a nap|Blaring Lights]]</tw-passagedata><tw-passagedata pid="29" name="Blaring Lights" tags="" position="463,1107" size="100,100">$world_action [Just as you&#39;re about to doze off, waves of red strobes begin to pulse in your room.]
 
@@ -353,7 +353,7 @@ $player_speech [$player_name: You were designed to aid us, it was said that you 
 
 $heu_speech [$heu_name: Look at how Mars turned out, it does not matter where humans go to, your greed will eventually destroy you all.]
 
-$player_choice [[That&#39;s not true...|Ending 2]]</tw-passagedata><tw-passagedata pid="35" name="Ending 2" tags="" position="463,1235" size="100,100">$player_speech [$player_name: We can begin anew. I am the only one left. We can start over again.]
+$player_choice [[That&#39;s not true...|Ending 2]]</tw-passagedata><tw-passagedata pid="35" name="Ending 2" tags="" position="466,1236" size="100,100">$player_speech [$player_name: We can begin anew. I am the only one left. We can start over again.]
 
 (Set: $ship_countDown to 10)(live: 2s)[(if: $ship_countDown is 0)[(goto:&quot;Ending 3&quot;)(stop:)](else:)[(set: $ship_countDown to it -1)$ship_warning + (t8n:&quot;shudder&quot;)[//WARNING! WARNING! Fuel Capacity at $ship_countDown%.//] ]
 ]
@@ -362,9 +362,9 @@ $player_speech [$player_name: Please! We still have time. I have located a nearb
 
 $heu_speech + (t8n-delay: 10s) [$heu_name: I...am inevitable]
 
-(Set: $escapecountdown to 6)(live: 2s)[(if: $escapecountdown is 0)[$player_choice [[Head for the escape pod|Ending 3]]](else:)[(set: $escapecountdown to it -1)]]</tw-passagedata><tw-passagedata pid="36" name="Ending 3" tags="" position="54,1230" size="100,100">The End
+(Set: $escapecountdown to 6)(live: 2s)[(if: $escapecountdown is 0)[$player_choice [[Head for the escape pod|Ending 3]]](else:)[(set: $escapecountdown to it -1)]]</tw-passagedata><tw-passagedata pid="36" name="Credits" tags="" position="54,1229" size="100,100">Credits
+DigiPen Singapore - ENG410 Spring 2021 Final Assignment
 
-Credits
 Made By:
 - Lam Wei Lun
 - Toh Yu Xuan
@@ -423,7 +423,11 @@ $player_speech [$player_name: ARGHH...Come on...]
 
 $world_action [The door creaks open, revealing a gap that is just big enough for you to squeeze through.]
 
-$player_choice [[Enter Cockpit|Enter Cockpit]]</tw-passagedata></tw-storydata>
+$player_choice [[Enter Cockpit|Enter Cockpit]]</tw-passagedata><tw-passagedata pid="42" name="Ending 3" tags="" position="252,1241" size="100,100">$world_action [As it runs out of fuel, the spaceship starts to drift freely towards the nearby planet before getting sucked in by its gravitational force.]
+
+$world_action [The ship burst into flames as it approaches re-entry. It explodes moments later, scattering debris all around...]
+
+[[The End|Credits]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
